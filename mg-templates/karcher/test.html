@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<?=mgMeta();?>
+	<link href="<?=PATH_SITE_TEMPLATE;?>/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="<?php echo PATH_SITE_TEMPLATE ?>/css/jquery.tooltipster.css">
+	<link rel="stylesheet" href="<?php echo PATH_SITE_TEMPLATE ?>/css/themes/tooltipster-shadow.css">
+	<link rel="stylesheet" href="<?php echo PATH_SITE_TEMPLATE ?>/css/jquery.bxslider.css">
+	<script type="text/javascript" src="<?php echo PATH_SITE_TEMPLATE ?>/js/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="<?php echo PATH_SITE_TEMPLATE ?>/js/jquery-ui-1.10.1.custom.min.js"></script>
+	<script type="text/javascript" src="<?php echo SITE ?>/mg-core/script/jquery.maskedinput.min.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/jquery.cookie.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/jquery.bxslider.min.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/jquery.idTabs.min.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/jquery.tooltipster.min.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/basket/basket-pages.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/basket/basket-main.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/pages.js"></script>
+	<script src="<?php echo PATH_SITE_TEMPLATE ?>/js/tabs.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="header" class="bor-b">
+			<div id="top-navigation" class="clearfix">
+			<div class="left">
+				<?php mgMenuFull();?>			
+			</div>
+			<div class="right top-search">	
+				<form method="get" action="<?php echo SITE?>/catalog" class="search-form">
+					<input type="text" autocomplete="off" name="search" placeholder="поиск по каталогу">
+				</form>			
+			</div><!-- !div.right.top-search -->
+			</div><!-- !div#top-navigation -->
+			<div id="header-info" class="clearfix">
+				<div class="left logo-box">
+					<h1>MyKarcher.ru</h1>
+					<p class="slogan">Интернет магазин техники Karcher</p>
+				</div>
+				<div class="right cart-basket-box">
+				<table width="100%">
+					<tr>
+						<td><p><i class="icon-lock"></i> <a href="" class="orange b-d-ntd"> Личный кабинет</a></p></td>
+					</tr>
+				</table>
+				</div>
+				<div class="right contacts-box">
+				<table width="100%">
+					<tr class="td-phones">
+						<td width="180" height="35">
+							<span class="gray"><i class="icon-phone"></i> (391) </span><span class="orange">2-888-446</span>						
+						</td>
+						<td><span class="gray"><i class="icon-phone"></i> (391) </span><span class="orange">2-888-446</span></td>
+					</tr>
+					<tr>
+						<td><i class="icon-callback"></i> <a href="#callBack" class="modalbox orange b-d">обратный звонок</a></td>
+						<td><i class="icon-mail"></i> <a href="mailto:karcher-nadom@mail.ru" class="gray">karcher-nadom@mail.ru</a></td>
+					</tr>
+				</table>
+				</div>			
+			</div><!-- !div#header-info -->
+		</div><!-- !div#header -->
+		<div class="middle">
+			<div class="container">
+				<main class="content">
+					[slider-images]
+					<div class="tabs-box">	
+						<div class="product-list-title clearfix">
+							<div class="left"><p>Популярные товары</p></div>
+							<div class="right">
+								<ul class="tabs-ui">
+									<li class="last-tab right-tab"><a href="#" rel="next"></a></li>
+									<li class="left-tab"><a href="#" rel="prev"></a></li>
+								</ul>
+							</div>				
+						</div>
+						<div class="product-list tabs-content clearfix">					
+							<? $pGoods = PopularGoods::getProduct(8); $pIteration = 1; ?>
+							<? if($pIteration == 1): ?>
+							<div class="tab tab-first">
+							<? endif; ?>
+							<? if($pIteration % 4 == 0): ?>
+							<div class="tab">
+							<? endif; ?>
+								<? foreach($pGoods as $item): ?>
+								<div class="product-preview-box" data-id="<?=$item[id];?>">
+									<img src="<?php echo $item["image_url"] ? SITE.'/uploads/thumbs/70_'.$item["image_url"] : SITE."/uploads/no-img.jpg" ?>" alt="<?=$item[title]?>">
+									<div class="desc-preview">
+										<p class="title"><a href=""><?=$item['title'];?></a></p>
+										<span class="price"><?=$item['price'];?></span>
+									</div>
+									<a class="add-cart" href="#"><i class="icon-basket"></i> Добавить в корзину</a>
+								</div><!-- !div.product-preview-box -->
+								<? endforeach; ?>
+							<? if(($pIteration == 1) || ($pIteration % 4 == 0)): ?>
+							</div><!-- !div.tab -->
+							<? endif; ?>						
+						</div><!-- !div.product-list.tabs-content -->
+					</div><!-- !div.tabs-box -->
+					<div class="tabs-box">	
+						<div class="product-list-title clearfix">
+							<div class="left"><p>Новые товары</p></div>
+							<div class="right">
+								<ul class="tabs-ui">
+									<li class="last-tab right-tab"><a href="#" rel="next"></a></li>
+									<li class="left-tab"><a href="#" rel="prev"></a></li>
+								</ul>
+							</div>				
+						</div>		
+						<div class="product-list tabs-content clearfix">
+							<div class="tab tab-first">
+								<div class="product-preview-box" data-id="6">
+									<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+									<div class="desc-preview">
+										<p class="title"><a href="">Karcher SC 2600 СB 1</a></p>
+										<span class="price">12 800 руб.</span>
+									</div>
+									<a class="add-cart" href=""><i class="icon-basket"></i> Добавить в корзину</a>
+								</div><!-- !div.product-preview-box -->
+								<div class="product-preview-box" data-id="7">
+									<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+									<div class="desc-preview">
+										<p class="title"><a href="">Karcher SC 2600 СB 3</a></p>
+										<span class="price">12 800 руб.</span>
+									</div>
+									<a class="add-cart" href=""><i class="icon-basket"></i> Добавить в корзину</a>
+								</div><!-- !div.product-preview-box -->					
+								<div class="product-preview-box" data-id="8">
+									<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+									<div class="desc-preview">
+										<p class="title"><a href="">Karcher SC 2600 СB 3</a></p>
+										<span class="price">12 800 руб.</span>
+									</div>
+									<a class="add-cart" href=""><i class="icon-basket"></i> Добавить в корзину</a>
+								</div><!-- !div.product-preview-box -->	
+								<div class="product-preview-box" data-id="9">
+								<div class="sale-product">Распродажа</div>
+									<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+									<div class="desc-preview">
+										<p class="title"><a href="">Karcher SC 2600 СB 2</a></p>
+										<span class="old-price">15 400 руб.</span> <span class="price">12 800 руб.</span>
+									</div>
+									<a class="add-cart" href=""><i class="icon-basket"></i> Добавить в корзину</a>
+								</div><!-- !div.product-preview-box -->
+							</div><!-- !div.tab.tab-first -->
+							<div class="tab">
+								<div class="product-preview-box" data-id="10">
+									<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+									<div class="desc-preview">
+										<p class="title"><a href="">Karcher SC 2600 СB 3</a></p>
+										<span class="price">12 800 руб.</span>
+									</div>
+									<a class="add-cart" href=""><i class="icon-basket"></i> Добавить в корзину</a>
+								</div><!-- !div.product-preview-box -->	
+							</div><!-- !div.tab -->							
+						</div><!-- !div.product-list.tabs-content -->
+					</div><!-- !div.tabs-box -->
+					<div class="tabs-box">
+						<div class="product-list-title clearfix">
+							<div class="left"><p>Последние новости и статьи</p></div>
+							<div class="right">
+								<ul class="tabs-ui">
+									<li class="last-tab right-tab"><a href="#" rel="next"></a></li>
+									<li class="left-tab"><a href="#" rel="prev"></a></li>
+								</ul>
+							</div>				
+						</div>
+						<div class="product-list tabs-content clearfix">
+							<div class="tab tab-first">
+								<div class="news-main-page clearfix">
+									<div class="news-img"><img src="http://placehold.it/255x160" /></div>
+									<div class="desc">
+										<p class="title"><a href="#">Пришла Защита шлангов высокого давления</a></p>
+										<p class="date"><i class="icon-time"></i> 2 Ноября, 2013</p>
+										<p class="text-desc">Дождались защиту на шланги высокого давления Теперь избавим города от проблемы порванных шлангов, а также перетирания и износа шлангов.</p>
+									</div><!-- !div.desc -->
+								</div><!-- !div.news-main-page -->
+								<div class="news-main-page clearfix">
+									<div class="news-img"><img src="http://placehold.it/255x160" /></div>
+									<div class="desc">
+										<p class="title"><a href="#">Пришла Защита шлангов высокого давления</a></p>
+										<p class="date"><i class="icon-time"></i> 2 Ноября, 2013</p>
+										<p class="text-desc">Дождались защиту на шланги высокого давления Теперь избавим города от проблемы порванных шлангов, а также перетирания и износа шлангов.</p>
+									</div><!-- !div.desc -->
+								</div><!-- !div.news-main-page -->
+							</div><!-- !div.tab -->
+							<div class="tab">
+								<div class="news-main-page clearfix">
+									<div class="news-img"><img src="http://placehold.it/255x160" /></div>
+									<div class="desc">
+										<p class="title"><a href="#">Пришла Защита шлангов высокого давления2</a></p>
+										<p class="date"><i class="icon-time"></i> 2 Ноября, 2013</p>
+										<p class="text-desc">Дождались защиту на шланги высокого давления Теперь избавим города от проблемы порванных шлангов, а также перетирания и износа шлангов.</p>
+									</div><!-- !div.desc -->
+								</div><!-- !div.news-main-page -->
+								<div class="news-main-page clearfix">
+									<div class="news-img"><img src="http://placehold.it/255x160" /></div>
+									<div class="desc">
+										<p class="title"><a href="#">Пришла Защита шлангов высокого давления2</a></p>
+										<p class="date"><i class="icon-time"></i> 2 Ноября, 2013</p>
+										<p class="text-desc">Дождались защиту на шланги высокого давления Теперь избавим города от проблемы порванных шлангов, а также перетирания и износа шлангов.</p>
+									</div><!-- !div.desc -->
+								</div><!-- !div.news-main-page -->
+							</div><!-- !div.tab -->				
+						</div><!-- !div.product-list.tabs-content -->
+					</div><!-- !div.tabs-box -->
+				</main><!-- .content -->
+			</div><!-- .container-->
+			<aside class="left-sidebar">
+				<div class="sidebar-box">
+					<div class="title-box"><i class="icon-folder"></i>Каталог</div>
+					<ul class="nav-content">
+						<?=$data['categoryList'];?>
+					</ul>
+				</div><!-- !div.sidebar-box -->
+				<div class="sidebar-box">
+					<img src="<?=PATH_SITE_TEMPLATE;?>/img/banners/credit.jpg" />
+				</div><!-- !div.sidebar-box -->
+				<div class="sidebar-box bor-b">
+					<div class="title-box"><i class="icon-ribbon"></i>Бестселлеры</div>
+						<div class="left-sidebar-product clearfix">
+							<div class="left preview-sidebar-img">
+								<img src="http://placehold.it/65x65" />
+							</div>
+							<div class="left">
+								<p><a href="" class="orange">Karcher DS 5800</a></p>
+								<span class="price">12 800 руб.</span>						
+							</div>
+						</div><!-- .left-sidebar-product -->
+						<div class="left-sidebar-product clearfix">
+							<div class="left preview-sidebar-img">
+								<img src="http://placehold.it/65x65" />
+							</div>
+							<div class="left">
+								<p><a href="" class="orange">Karcher DS 5800</a></p>
+								<span class="price">12 800 руб.</span>						
+							</div>
+						</div><!-- .left-sidebar-product -->
+						<div class="left-sidebar-product clearfix">
+							<div class="left preview-sidebar-img">
+								<img src="http://placehold.it/65x65" />
+							</div>
+							<div class="left">
+								<p><a href="" class="orange">Karcher DS 5800</a></p>
+								<span class="price">12 800 руб.</span>						
+							</div>
+						</div><!-- .left-sidebar-product -->
+						<div class="left-sidebar-product clearfix">
+							<div class="left preview-sidebar-img">
+								<img src="http://placehold.it/65x65" />
+							</div>
+							<div class="left">
+								<p><a href="" class="orange">Karcher DS 5800</a></p>
+								<span class="price">12 800 руб.</span>						
+							</div>
+						</div><!-- .left-sidebar-product -->
+				</div>
+				<div class="sidebar-box bor-b tabs-box">
+					<div class="title-box clearfix no-pd">
+						<div class="left special-sd-box"><i class="icon-sale"></i>Скидки</div>
+						<div class="right">
+							<ul class="tabs-ui">
+								<li class="last-tab right-tab"><a href="#" rel="next"></a></li>
+								<li class="left-tab"><a href="#" rel="prev"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabs-content">
+						<div class="product-preview-box special-sd-product tab tab-first">
+							<div class="sale-product">Распродажа</div>
+							<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+							<div class="desc-preview">
+								<p class="title"><a href="">Karcher SC 2600 СB 3</a></p>
+								<span class="old-price">15 400 руб.</span> <span class="price">12 800 руб.</span>
+							</div>					
+						</div><!-- !div.product-preview-box.tab -->
+						<div class="product-preview-box special-sd-product tab">
+							<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+							<div class="desc-preview">
+								<p class="title"><a href="">Karcher SC 2600 СB 4</a></p>
+								<span class="price">12 500 руб.</span>
+							</div>					
+						</div><!-- !div.product-preview-box.tab -->
+						<div class="product-preview-box special-sd-product tab">
+							<img src="http://placehold.it/245x245" alt="Karcher 2500" />
+							<div class="desc-preview">
+								<p class="title"><a href="">Karcher SC 2600 СB 5</a></p>
+								<span class="price">12 500 руб.</span>
+							</div>					
+						</div><!-- !div.product-preview-box.tab -->
+					</div><!-- !div.tabs-content -->					
+				</div><!-- !div.sidebar-box -->			
+			</aside><!-- .left-sidebar -->
+		</div><!-- .middle-->
+	</div><!-- .wrapper -->
+	<div id="footer">
+		<div id="footer-top-bg" class="bor-t">
+			<div class="footer-wrapper clearfix">
+				<div class="left">
+					<p class="title">Контакты</p>
+					<ul>
+						<li><i class="icon-map-pointer"></i> г. Красноярск, ул. Вавилова, 1 стр. 39 первый этаж</li>
+						<li><i class="icon-phone"></i> 8(391)2-888-446</li>
+						<li><i class="icon-mail"></i> <a href="mailto:karcher-nadom@mail.ru">karcher-nadom@mail.ru</a></li>
+					</ul>
+				</div>
+				<div class="left-small">
+					<p class="title">Информация</p>
+					<ul class="info-list">
+						<li><a href="">Возврат товара</a></li>
+						<li><a href="">Условия соглашения</a></li>
+						<li><a href="">Сервисное облуживание</a></li>
+						<li><a href="">Подарочные сертификаты</a></li>
+						<li><a href="">Акции</a></li>
+						<li><a href="">Карта сайта</a></li>
+					</ul>
+				</div>
+				<div class="left-big">
+					<p class="title">О нас</p>
+					<p>В нашем магазине вы всегда сможете купить широкий спектр бытового и профессионального моечного оборудования Karcher по низкой цене: мойки высокого давления, пылесосы, минимойки, электровеникии и другую технику.</p>
+					<p>Наши консультанты помогут вам подобрать именно тот товар который подойдет для решения ваших задач. Ни один клиент будь то представитель клининговой компании или же простая домохозяйка, не уйдет от нас недовольным!</p>
+				</div>
+			</div><!-- !div.footer-wrapper -->
+		</div><!-- !div#footer-top-bg -->
+		<div id="footer-bottom-bg">
+			<div id="copyright-info" class="footer-wrapper">
+				<p><span>&#169; 2010-2013</span> MyKarcher.ru <span>интернет магазин бытовой техники karcher</span></p>
+			</div>
+		</div><!-- !#footer-bottom-bg -->	
+	</div><!-- !div#footer -->
+	</body>
+	</html>

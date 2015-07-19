@@ -1,0 +1,127 @@
+.clearfix:after{
+  	content: ".";
+  	display: block;
+  	height: 0;
+  	clear: both;
+  	visibility: hidden;
+}
+
+#no-results td{
+	padding: 25px;
+}
+
+.blocks-plugin{
+	padding: 15px;
+}
+
+.blocks-plugin h3{
+	margin-bottom: 15px;
+	font-weight: normal;
+	font-size: 16px;
+	background-color: #EFEFEF;
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#FDFDFD), to(#EAEAEA));
+	background-image: -webkit-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+	background-image: -moz-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+	background-image: -ms-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+	background-image: -o-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+	background-image: -linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#eaeaea',GradientType=0 );
+	border: 1px solid #e0dede;
+	height: 36px;
+	padding: 0 15px;
+	line-height: 36px;
+	border-radius: 3px;
+ }
+
+ .blocks-plugin .content-settings{
+ 	background-color: #EFEFEF;
+ 	padding: 15px;
+ 	border-radius: 3px;
+ 	border: 1px solid #e0dede;
+ 	display: none;
+ }
+
+ .blocks-plugin .content-settings .setting-box{
+ 	position: relative;
+ 	min-height: 25px;
+ 	margin-top: 10px;
+ }
+
+ .content-settings .setting-box .content-setting{
+ 	display: none;
+ }
+
+ .blocks-plugin .content-settings .setting-box .title-stg{
+ 	position: absolute;
+ 	top: -14px;
+ 	left: 5px;
+ 	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#FDFDFD), to(#EAEAEA));
+ 	background-image: -webkit-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -moz-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -ms-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -o-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#eaeaea',GradientType=0 );
+ 	border: 1px solid #cccccc;
+ 	padding: 5px 8px;
+ 	border-radius: 3px;
+ 	color: #08C;
+ 	cursor: pointer;
+ }
+
+ .blocks-plugin .content-settings .setting-box .content-setting{
+ 	border: 1px solid #cccccc;
+ 	padding: 25px 15px 15px 15px;
+ 	background-color: #fff;
+ 	border-radius: 3px;
+ 	margin-bottom: 10px;
+ }
+
+ .blocks-plugin .content-settings .setting-box .content-setting .form-el{
+ 	padding: 12px 0;
+ 	border-bottom: 1px solid #dddddd;
+ }
+
+ .blocks-plugin .content-settings .setting-box .content-setting .form-el label{
+ 	min-width: 75px;
+ 	display: inline-block;
+ }
+
+ .blocks-plugin .content-settings .setting-box .content-setting .form-el input[type="text"],  .blocks-plugin .content-settings .setting-box .content-setting .form-el textarea{
+ 	min-width: 20%;
+ }
+
+ .blocks-plugin .content-settings .setting-box .content-setting .form-el input[type="text"]:disabled{
+ 	background-color: #eee;
+ }
+
+ .blocks-plugin .content-settings .setting-box .content-setting .save-button{
+ 	float: left;
+ }
+
+.blocks-plugin.settings .toggleLink{
+ 	margin-bottom: 15px;
+ 	text-decoration: none;
+ 	background-color: #EFEFEF;
+ 	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#FDFDFD), to(#EAEAEA));
+ 	background-image: -webkit-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -moz-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -ms-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -o-linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	background-image: -linear-gradient(top, #FDFDFD 0%, #EAEAEA 100%);
+ 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#eaeaea',GradientType=0 );
+ 	border: 1px solid #e0dede;
+ 	height: 36px;
+ 	padding: 0 15px;
+ 	line-height: 36px;
+ 	border-radius: 3px;
+ 	/*border-bottom: 1px dotted #08C;*/
+ }
+
+ .blocks-plugin.settings .toggleLink a{
+ 	font-weight: normal;
+ 	font-size: 16px;
+ 	border-bottom: 1px dotted #08C;
+ 	padding-bottom: 1px;
+ 	text-decoration: none;
+ }

@@ -1,0 +1,95 @@
+.main-news-block{  
+
+}
+
+.rss{
+color:#FF6D00;
+ display: block;
+ float: right;
+ padding:5px 5px 5px 25px;
+ margin: 10px 0px;
+ background:url(../images/rss.png) 0px 4px no-repeat;
+}
+
+/*Стили новостей*/
+.news-list .news-title a:hover{
+	text-decoration:underline;
+}
+
+.main-news-block .news-date{
+  font-size: 11px;
+  margin: 0px 0px 10px 0px; 
+  color: #979797;  
+}
+
+.main-news-img img{
+	border:1px solid #444;
+}
+
+.main-news-img{
+	margin:10px 0;
+}
+
+.rss-block p{
+	font-size:14px;
+}
+
+.main-news-block{
+	font-size:14px;
+	line-height:20px;
+}
+
+
+.newsheader{
+  margin: 0px;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 10px;
+  border-bottom: 1px solid #CDCDCD; 
+}
+
+.news-title, .news-title a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: normal; 
+  color: #000;
+  margin: 10px 0px;
+}
+
+.go-back-link{
+  display: block;
+  margin: 10px 5px;
+  color:#3A8FE8;
+}
+
+.go-back-link:hover, .read-more:hover{
+	text-decoration:none;
+}
+
+.read-more{
+display:block;
+margin:10px 0 0 0;
+  font-weight: normal; 
+  color: #3A8FE8;
+  float:right;
+}
+
+.main-news-img img{
+  width: 200px;
+  height: 150px;
+}
+
+.rss-block{
+ margin: 10px 0px;
+}
+
+.rss{
+ display: block;
+ float: right;
+ margin: 10px 0px;
+}
+
+
+.main-news-item{
+  margin: 20px 5px;  
+}

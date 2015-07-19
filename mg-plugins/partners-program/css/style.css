@@ -1,0 +1,48 @@
+/*Попап в админке партнерской системы*/
+.partners-payment-block{border:1px solid #D3D3D3;}
+.partners-payment-block .widget-table tr td{padding:15px;}
+#add-partners-wrapper .notify-message{color:#4d8b52;border:1px solid #aed0b1;background:#d7f4ce;padding:10px;border-radius:5px;
+-moz-border-radius:5px; -webkit-border-radius:5px;}
+#add-partners-wrapper .save-button{margin:15px 0;}
+.partners-table-body{padding:0 15px 15px 15px;}
+.bold-text{font-weight:bold;}
+
+
+/*Стили вида партнерки*/
+.accostPartner {font-family: Tahoma, Verdana, sans-serif;font-size: 14px; line-height:20px;}
+.accostPartner p span{color:#0B78C0; font-weight:bold;}
+.accostPartner p span::selection {background: red;color:#fff;}
+.accostPartner p span::-moz-selection {background: red;color:#fff;}
+.partnerProgram{font-size:14px; font-family:Tahoma, Verdana, sans-serif;line-height:20px;}
+.blockBalance {margin:5px 0 0 0;}
+.blockBalance ul li .bold-text{font-weight:bold;}
+.blockBalance .notify-error{color:red;font-size:12px;font-weight:bold;}
+.showFormOrderParnet {margin:5px 0;display:inline-block;	font-family: Tahoma, Verdana, sans-serif;font-size: 12px;padding: 5px 10px;
+	text-decoration:none;background: #008fba;color:#fff;
+	background: -moz-linear-gradient(
+		top,
+		#00ccff 0%,
+		#008fba);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#00ccff),
+		to(#008fba));
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #0085b5;
+	-moz-box-shadow:
+		0px 1px 5px rgba(000,000,000,0.5),
+		inset 0px 1px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 1px 5px rgba(000,000,000,0.5),
+		inset 0px 1px 1px rgba(255,255,255,0.6);
+	box-shadow:
+		0px 1px 5px rgba(000,000,000,0.5),
+		inset 0px 1px 1px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(000,117,171,0.6),
+		0px 0px 0px rgba(255,255,255,0);
+}
+.showFormOrderParnet:hover{background: #00AAD8;}
+.showFormOrderParnet:active{box-shadow:inset 0 0 8px #08738F;}

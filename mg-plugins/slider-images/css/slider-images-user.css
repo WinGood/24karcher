@@ -1,0 +1,26 @@
+#slider-box ul{
+	margin: 0;
+	padding: 0;
+}
+
+#slider-img li {
+	position: relative;
+}
+
+#slider-img li .slider-desc .title a {
+	color: #e47c31;
+	font-size: 16px;
+}
+
+#slider-img li .slider-desc {
+	background-color: #343434;
+	padding: 2.5%;
+	color: white;
+	position: absolute;
+	bottom: 0;
+}
+
+
+#slider-img li .slider-desc p{
+	line-height: 18px;
+}

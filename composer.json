@@ -1,0 +1,12 @@
+{
+    "name": "zzzaki/24karcher.dev",
+    "authors": [
+        {
+            "name": "zzzaki",
+            "email": "techokill@gmail.com"
+        }
+    ],
+    "require": {
+        "stojg/crop": "^1.2"
+    }
+}

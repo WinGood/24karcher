@@ -1,0 +1,101 @@
+.call-back-btn a{
+	display: inline-block;
+	background-color: #cc0000;
+	padding: 10px 12px;
+	color: white;
+	text-decoration: none;
+	transition: background-color .2s ease;
+}
+
+.call-back-btn a:hover{
+	background-color: #e40000;
+}
+
+#ajxCallBack{
+	display: none;
+}
+
+#ajxCallBack .content-modal{
+	margin-bottom: 5px;
+}
+
+#ajxCallBack.success{
+	background-color: #009966;
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	padding: 25px;
+	border-radius: 6px;
+}
+
+#ajxCallBack.error{
+	background-color: #ff3333;
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	padding: 25px;
+	border-radius: 6px;
+}
+
+#ajxCallBack .title{
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+	padding-bottom: 8px;
+	margin-bottom: 10px;
+	text-align: center;
+	border-bottom: 1px solid #dedede;
+}
+
+#ajxCallBack .form-el{
+	margin-bottom: 10px;
+}
+
+#ajxCallBack .form-el label{
+	display: block;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+#ajxCallBack .form-el input, #ajxCallBack .form-el textarea{
+	width: 88%;
+	margin: 0 4px;
+	padding: 8px 12px;
+	border-radius:3px;
+	border:1px solid #CCCCCC;
+}
+
+#ajxCallBack .form-el textarea{
+	border-radius:3px;
+	border:1px solid #CCCCCC;
+	box-shadow:inset 0 1px 2px #E7E7E7;
+	min-height: 80px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+}
+
+#ajxCallBack .form-el textarea:focus, #ajxCallBack .form-el input:focus{
+	box-shadow: 0 0 5px rgba(77,142,216, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+	outline: none;
+}
+
+#ajxCallBack button{
+	background-color: #343434;
+	padding: 8px 12px;
+	color: white;
+	border: none;
+	font-size: 12px;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	transition: background-color .2s ease;
+}
+
+#ajxCallBack button:hover{
+	background-color: #181818;
+	color: white;
+}
